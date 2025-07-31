@@ -5,7 +5,7 @@ import morgan from 'morgan'
 import compression from 'compression'
 import dotenv from 'dotenv'
 
-// 导入路由
+// 导入路由 - 修复编码问题
 import authRoutes from './routes/auth'
 import postRoutes from './routes/posts'
 import categoryTagRoutes from './routes/categoryTag'

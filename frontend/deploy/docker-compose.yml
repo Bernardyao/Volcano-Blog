@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ..
+      dockerfile: ./deploy/Dockerfile
+    container_name: volcano-frontend
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    networks:
+      - volcano-network
+
+networks:
+  volcano-network:
+    driver: bridge
