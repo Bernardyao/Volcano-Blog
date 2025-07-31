@@ -1,6 +1,9 @@
 @echo off
 :: 编译TypeScript代码并准备生产环境
 
+:: 移动到backend根目录
+cd ..
+
 echo === 开始编译TypeScript代码 ===
 :: 检查是否安装了TypeScript
 where tsc >nul 2>&1

@@ -1,6 +1,9 @@
 #!/bin/bash
 # 编译TypeScript代码并准备生产环境
 
+# 移动到backend根目录
+cd ..
+
 echo "=== 开始编译TypeScript代码 ==="
 # 安装TypeScript (如果需要)
 if ! command -v tsc &> /dev/null

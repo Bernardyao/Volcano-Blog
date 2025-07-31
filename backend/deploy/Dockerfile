@@ -3,11 +3,11 @@ FROM node:20-alpine
 WORKDIR /app
 
 # 复制项目文件
-COPY package*.json ./
-COPY prisma ./prisma/
-COPY .env.example ./.env
-COPY tsconfig.json ./
-COPY src ./src/
+COPY ../package*.json ./
+COPY ../prisma ./prisma/
+COPY ../.env.example ./.env
+COPY ../tsconfig.json ./
+COPY ../src ./src/
 
 # 安装依赖
 RUN npm install --production
