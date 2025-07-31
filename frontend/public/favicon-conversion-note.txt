@@ -1,0 +1,2 @@
+<!-- 这个文件需要使用在线工具转换 -->
+<!-- 推荐使用 https://convertico.com/ 将 favicon.svg 转换为 favicon.ico -->

@@ -1,0 +1,205 @@
+/* 🌋 Volcano Blog - Medium风格主题 */
+
+:root {
+  /* === Medium严格官方配色系统 === */
+  
+  /* 主色调 - Medium官方绿色 */
+  --volcano-primary: #1a8917;
+  --volcano-primary-light: #57c05a;
+  --volcano-primary-dark: #0f730c;
+  
+  /* 辅助色 - Medium官方色板 */
+  --volcano-secondary: #117a00;
+  --volcano-secondary-light: #57c05a;
+  --volcano-secondary-dark: #0d5f00;
+  
+  /* 中性色 - Medium官方灰色系统 */
+  --volcano-neutral-900: #191919;
+  --volcano-neutral-800: #242424;
+  --volcano-neutral-700: #373737;
+  --volcano-neutral-600: #6b6b6b;
+  --volcano-neutral-500: #8b8b8b;
+  --volcano-neutral-400: #b5b5b5;
+  --volcano-neutral-300: #d9d9d9;
+  --volcano-neutral-200: #e6e6e6;
+  --volcano-neutral-100: #f2f2f2;
+  --volcano-neutral-50: #fafafa;
+  
+  /* 浅色模式背景 - Medium官方白色系 */
+  --volcano-bg-primary: #ffffff;
+  --volcano-bg-secondary: #fafafa;
+  --volcano-bg-tertiary: #f2f2f2;
+  
+  /* 浅色模式文字 - Medium官方字色 */
+  --volcano-text-primary: #242424;
+  --volcano-text-secondary: #6b6b6b;
+  --volcano-text-tertiary: #8b8b8b;
+  
+  /* 浅色模式边框 - Medium官方边框色 */
+  --volcano-border-light: #e6e6e6;
+  --volcano-border-medium: #d9d9d9;
+  --volcano-border-strong: #b5b5b5;
+  
+  /* Medium官方阴影系统 */
+  --volcano-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --volcano-shadow-md: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --volcano-shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  --volcano-shadow-xl: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  
+  /* 更新原有CSS变量 */
+  --color-accent: var(--volcano-primary);
+  --color-accent-hover: var(--volcano-primary-dark);
+  --color-text-primary: var(--volcano-text-primary);
+  --color-text-secondary: var(--volcano-text-secondary);
+  --color-text-tertiary: var(--volcano-text-tertiary);
+  --color-bg-primary: var(--volcano-bg-primary);
+  --color-bg-secondary: var(--volcano-bg-secondary);
+  --color-bg-tertiary: var(--volcano-bg-tertiary);
+  --color-border-light: var(--volcano-border-light);
+  --color-border-medium: var(--volcano-border-medium);
+}
+
+/* === Medium官方深色主题 === */
+.dark-theme {
+  /* 深色模式背景 - Medium官方深色系 */
+  --volcano-bg-primary: #121212;
+  --volcano-bg-secondary: #191919;
+  --volcano-bg-tertiary: #242424;
+  
+  /* 深色模式文字 - Medium官方深色文字 */
+  --volcano-text-primary: #ffffff;
+  --volcano-text-secondary: #b5b5b5;
+  --volcano-text-tertiary: #8b8b8b;
+  
+  /* 深色模式边框 - Medium官方深色边框 */
+  --volcano-border-light: #373737;
+  --volcano-border-medium: #484848;
+  --volcano-border-strong: #5a5a5a;
+  
+  /* 深色模式阴影 - Medium官方深色阴影 */
+  --volcano-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.6);
+  --volcano-shadow-md: 0 3px 6px rgba(0, 0, 0, 0.6), 0 3px 6px rgba(0, 0, 0, 0.7);
+  --volcano-shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.7), 0 6px 6px rgba(0, 0, 0, 0.8);
+  --volcano-shadow-xl: 0 14px 28px rgba(0, 0, 0, 0.8), 0 10px 10px rgba(0, 0, 0, 0.9);
+  
+  /* 更新变量 */
+  --color-bg-primary: var(--volcano-bg-primary);
+  --color-bg-secondary: var(--volcano-bg-secondary);
+  --color-bg-tertiary: var(--volcano-bg-tertiary);
+  --color-text-primary: var(--volcano-text-primary);
+  --color-text-secondary: var(--volcano-text-secondary);
+  --color-text-tertiary: var(--volcano-text-tertiary);
+  --color-border-light: var(--volcano-border-light);
+  --color-border-medium: var(--volcano-border-medium);
+}
+
+/* === Medium风格的平滑过渡 === */
+* {
+  transition: background-color 0.3s ease, 
+              color 0.3s ease, 
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+/* === Medium官方字体系统 === */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: var(--volcano-text-primary);
+  background-color: var(--volcano-bg-primary);
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+/* Medium风格的链接 */
+a {
+  color: var(--volcano-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--volcano-primary-dark);
+  text-decoration: underline;
+}
+
+/* Medium风格的按钮 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 99em;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--volcano-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--volcano-primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--volcano-primary);
+  border: 1px solid var(--volcano-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--volcano-primary);
+  color: white;
+}
+
+/* === Medium官方文本样式 === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.article-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--volcano-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.article-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--volcano-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.article-meta {
+  font-size: 0.875rem;
+  color: var(--volcano-text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* === Medium官方卡片样式 === */
+.medium-card {
+  background: var(--volcano-bg-primary);
+  border: 1px solid var(--volcano-border-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--volcano-shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.medium-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--volcano-shadow-md);
+  border-color: var(--volcano-border-medium);
+}

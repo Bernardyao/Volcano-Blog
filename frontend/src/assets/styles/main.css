@@ -1,0 +1,172 @@
+@import './base.css';
+@import './themes.css';
+
+/* Medium-inspired layout and components */
+
+/* Loading states */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl);
+  color: var(--color-text-tertiary);
+  font-size: 16px;
+}
+
+.loading::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border-light);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: var(--spacing-sm);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Card components */
+.card {
+  background: var(--color-bg-primary);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border-light);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--color-border-medium);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Article/Post styles */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+  margin-bottom: var(--spacing-md);
+}
+
+.article-meta .author {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.article-meta .date {
+  color: var(--color-text-tertiary);
+}
+
+.article-meta .separator {
+  width: 2px;
+  height: 2px;
+  background: var(--color-text-tertiary);
+  border-radius: 50%;
+}
+
+/* Tags */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+}
+
+/* Navigation improvements */
+.nav-link {
+  position: relative;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-text-primary);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: var(--spacing-md);
+  right: var(--spacing-md);
+  height: 2px;
+  background: var(--color-accent);
+  border-radius: 1px;
+}
+
+/* Dividers */
+.divider {
+  height: 1px;
+  background: var(--color-border-light);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Error and empty states */
+.error-state,
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-3xl);
+  color: var(--color-text-tertiary);
+}
+
+.error-state h3,
+.empty-state h3 {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  :root {
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    --spacing-2xl: 32px;
+    --spacing-3xl: 48px;
+  }
+  
+  .container,
+  .container-wide {
+    padding: 0 var(--spacing-md);
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+}
+
+/* Focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background: rgba(26, 137, 23, 0.1);
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- 使用Volcano主色调背景 -->
+  <rect width="32" height="32" rx="6" fill="#1a8917"/>
+  
+  <!-- 简约山峰设计 -->
+  <g fill="white">
+    <!-- 主山峰 -->
+    <polygon points="10,20 16,8 22,20 22,28 10,28"/>
+    
+    <!-- 左侧小山峰 -->
+    <polygon points="4,22 10,14 14,22 14,28 4,28" opacity="0.8"/>
+    
+    <!-- 右侧小山峰 -->
+    <polygon points="18,22 24,12 28,22 28,28 18,28" opacity="0.8"/>
+  </g>
+  
+  <!-- 山峰顶部高光 -->
+  <g fill="rgba(255,255,255,0.6)">
+    <polygon points="15,10 16,8 17,10"/>
+    <polygon points="23,14 24,12 25,14"/>
+  </g>
+</svg>
